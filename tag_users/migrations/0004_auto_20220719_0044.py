@@ -12,6 +12,11 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='user',
+            name='Ambitious',
+            field=models.IntegerField(default=0),
+        ),
+        migrations.AddField(
+            model_name='user',
             name='BasketballFan',
             field=models.IntegerField(default=0),
         ),
@@ -22,7 +27,17 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='user',
+            name='DogLover',
+            field=models.IntegerField(default=0),
+        ),
+        migrations.AddField(
+            model_name='user',
             name='FilmBuff',
+            field=models.IntegerField(default=0),
+        ),
+        migrations.AddField(
+            model_name='user',
+            name='Gamer',
             field=models.IntegerField(default=0),
         ),
         migrations.AddField(
@@ -43,6 +58,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='user',
             name='NightOwl',
+            field=models.IntegerField(default=0),
+        ),
+        migrations.AddField(
+            model_name='user',
+            name='StarWarsFan',
             field=models.IntegerField(default=0),
         ),
         migrations.AddField(
