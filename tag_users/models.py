@@ -40,7 +40,7 @@ class User(models.Model):
     MatchCluster = models.IntegerField(default = -1)
     Tags = models.JSONField(default=getDefaultTags)
     MatchedUser = models.CharField(default = "", max_length = 50)
-    
+    Matched = models.BooleanField(default=False)    
     def __str__(self):
         return self.Username
 
