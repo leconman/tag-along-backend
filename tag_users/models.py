@@ -73,7 +73,7 @@ class User(models.Model):
             self.Tags['GymRat']
         ]]
         model = KMeans()
-        model = pickle.load(open("/Users/connorcourtien/Documents/tag-along-backend/tag_users/KMeans/model.pkl", "rb"))
+        model = pickle.load(open("/workspace/tag_users/KMeans/model.pkl", "rb"))
         cluster = model.predict(tags)
         print(cluster[0])
         self.MatchCluster = cluster[0]
