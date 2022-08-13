@@ -42,7 +42,7 @@ class User(models.Model):
     Tags = models.JSONField(default=getDefaultTags)
     MatchedUser = models.CharField(default = "", max_length = 50)
     Matched = models.BooleanField(default=False)  
-    LoggedIn = models.BooleanField(default=False)
+    SignedIn = models.BooleanField(default=False)
 
     def __str__(self):
         return self.Username

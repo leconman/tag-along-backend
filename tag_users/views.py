@@ -35,7 +35,7 @@ class MatchedUsers(APIView):
         user = User.objects.get(pk = pk)
         user.findCluster()
         user.save()
-        matches = User.objects.filter(MatchCluster = user.MatchCluster, InterestedLat=user.InterestedLat,InterestedLong=user.InterestedLong)
+        matches = User.objects.filter(MatchCluster = user.MatchCluster, InterestedLat=user.InterestedLat,InterestedLong=user.InterestedLong, SignedIn=True, Matched=False)
         
         matchedUsers = [match.Username for match in matches if user.Username != match.Username]
         return Response(matchedUsers)
