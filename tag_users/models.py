@@ -36,11 +36,14 @@ class User(models.Model):
     Username = models.CharField(primary_key = True, max_length=50)
     Password = models.CharField(max_length=50)
     Email = models.CharField(default = "",max_length=50)
-    Location = models.CharField(default = "",max_length=100)
+    InterestedLat = models.FloatField(default=0.0)
+    InterestedLong = models.FloatField(default=0.0)
     MatchCluster = models.IntegerField(default = -1)
     Tags = models.JSONField(default=getDefaultTags)
     MatchedUser = models.CharField(default = "", max_length = 50)
-    Matched = models.BooleanField(default=False)    
+    Matched = models.BooleanField(default=False)  
+    LoggedIn = models.BooleanField(default=False)
+
     def __str__(self):
         return self.Username
 
