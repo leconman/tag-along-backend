@@ -38,7 +38,7 @@ class MatchedUsers(APIView):
         matches = User.objects.filter(MatchCluster = user.MatchCluster, InterestedLat=user.InterestedLat,InterestedLong=user.InterestedLong, SignedIn=True, Matched=False)
         
         matchedUsers = [match.Username for match in matches if user.Username != match.Username]
-        return Response(matchedUsers)
+        return Response({"matches": matchedUsers})
         
 
 
