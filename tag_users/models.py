@@ -40,9 +40,9 @@ class User(models.Model):
     InterestedLong = models.FloatField(default=0.0)
     MatchCluster = models.IntegerField(default = -1)
     Tags = models.JSONField(default=getDefaultTags)
-    MatchedUser = models.CharField(default = "", max_length = 50)
+    MatchedUser = models.CharField(default = str(Username), max_length = 50)
     Matched = models.BooleanField(default=False)  
-    SignedIn = models.BooleanField(default=False)
+    SignedIn = models.BooleanField(default=True)
 
     def __str__(self):
         return self.Username
